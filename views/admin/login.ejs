@@ -1,0 +1,33 @@
+<div class="header__button">
+    <a href="/">
+      Previous
+    </a>
+  </div>
+<h3>Sign In</h3>
+
+ <!-- Display Success Message --> 
+    <% if (typeof successMessage !== 'undefined' && successMessage) { %> 
+        <p class="alert-success"><%= successMessage %></p> 
+    <% } %> 
+ 
+    <!-- Display Error Message --> 
+    <% if (typeof errorMessage !== 'undefined' && errorMessage) { %> 
+        <p class="alert-danger"><%= errorMessage %></p> 
+    <% } %> 
+
+
+<form action="/login" method="POST">
+
+  <label for="email"><b>Email</b></label>
+  <input type="email" placeholder="Enter Email" name="email" required>
+
+  <label for="password"><b>Password</b></label>
+  <input type="password" placeholder="Enter Password" name="password" required>
+
+  <input type="submit" value="Login" class="btn">
+
+</form>
+<div style="text-align: right; margin-top: 10px; text-decoration: none;">
+  <a href="/register">Don't have an account? Register</a>
+</div>
+
